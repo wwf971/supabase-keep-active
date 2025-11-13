@@ -1,8 +1,10 @@
 
 # pip install supabase
 import os
-os.environ['SUPABASE_URL'] = 'https://example.supabase.co'
-os.environ['SUPABASE_KEY'] = 'example'
+# your supabase project's url
+os.environ['SUPABASE_URL'] = 'https://ehxlalrrjkrkdrayksnj.supabase.co'
+# your supabase project's api key
+os.environ['SUPABASE_KEY'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVoeGxhbHJyamtya2RyYXlrc25qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NDAyNDUsImV4cCI6MjA3NzMxNjI0NX0.tTBh0-oXhnnPuPAhhprEoYrg702Wdm9z7WjW05kiRkA'
 
 from supabase import create_client, Client
 from datetime import datetime
