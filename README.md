@@ -20,9 +20,25 @@ CREATE TABLE IF NOT EXISTS activity_log (
 ```
 
 ### 3. Configure Credentials
+
+#### Finding Your Project URL and API Keys:
+1. Go to your Supabase project dashboard
+2. Click on "Settings" in the left sidebar
+3. Click on "API" in the settings menu
+
+**Project URL:**
+- Look for "Project URL" in the API settings
+- It will look like: `https://your-project-id.supabase.co`
+- ![Project URL Location](asset/project_url.png)
+
+**Anon/Public Key:**
+- Look for "anon public" or "public" key in the API settings
+- It starts with `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
+- ![API Keys Location](asset/data_api.png)
+
 Replace the placeholder values in `main.py`:
-- `os.environ['SUPABASE_URL']` with your Supabase project URL
-- `os.environ['SUPABASE_KEY']` with your Supabase anon key
+- `os.environ['SUPABASE_URL']` with your Project URL
+- `os.environ['SUPABASE_KEY']` with your anon public key
 
 ### 4. Schedule Automatic Runs (Linux)
 Assuming you are on Linux, run `crontab -e` and add this line:
@@ -31,3 +47,6 @@ Assuming you are on Linux, run `crontab -e` and add this line:
 ```
 
 This will run the script every day at noon (12:00 PM).
+
+
+
